@@ -16,6 +16,8 @@ if StratResults.nx == 2
         title(hA, 'Mean Likehood L(x)');
         zlabel('L(x)')
     end
+    xlim(hA, [min(StratResults.Xextr{2}/2/pi) max(StratResults.Xextr{2}/2/pi)]);
+    ylim(hA, [min(StratResults.Xextr{1}/2/pi) max(StratResults.Xextr{1}/2/pi)]);
     view(hA, [90,0])
 else
     disp('There is not required function: plot_Strut_Likehood');

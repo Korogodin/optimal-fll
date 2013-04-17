@@ -1,5 +1,5 @@
-global TrueValues StratResults Erro
+global TrueValues StratResults FLLRes Erro
 
-global DoStrat 
+global DoStrat DoFLL
 
 global h_timer
