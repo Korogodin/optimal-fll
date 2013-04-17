@@ -12,6 +12,8 @@ if StratResults.nx == 2
     ylabel(hA, '\omega, Hz');
     xlabel(hA, '\omega'', Hz/s');
     zlabel(hA, 'p(x_{k}|Y_{k-1})')
+    xlim(hA, [min(StratResults.Xextr{2}/2/pi) max(StratResults.Xextr{2}/2/pi)]);
+    ylim(hA, [min(StratResults.Xextr{1}/2/pi) max(StratResults.Xextr{1}/2/pi)]);
 else
     disp('Need function in plot_Strut_Pest');
     error;
