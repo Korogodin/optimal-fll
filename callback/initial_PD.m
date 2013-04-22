@@ -1,5 +1,5 @@
 % Initial state
-dX(1,1) = 1 * 2*pi; %
+dX(1,1) = 1/10 * 2*pi; %
 dX(2,1) = sqrt(Dksi) / 1.1;
 
 % HX1 = 2*pi*10;
