@@ -2,7 +2,7 @@ function start( MW )
 
 globals;
 
-qcno_dB = [10 13];
+qcno_dB = [12:0.5:16];
 qcno = 10.^(qcno_dB/10);
 
 T = 0.02;
@@ -11,7 +11,7 @@ T = 0.02;
 Sksi = 217.8;
 Dksi = Sksi * T;
 
-DoStrat = 1;
+DoStrat = 0;
 DoFLL = 1;
 
 Erro.qcno_dB = qcno_dB;
