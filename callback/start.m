@@ -2,7 +2,7 @@ function start( MW )
 
 globals;
 
-qcno_dB = [12:0.5:16];
+qcno_dB = 12:0.5:16;
 qcno = 10.^(qcno_dB/10);
 
 T = 0.02;
