@@ -62,7 +62,6 @@ Smeas = Dmeas * 0.02;
 Sksi = 217.8;
 D11 = (4*Sksi*Smeas.^3).^(1/4);
 
-
 % figure(11)
 % plot(SFS.qcno_dB_FLL, SFS.EFLL, SFS.qcno_dB_FLL_Theor, SFS.FLL_Theor, SFS.qcno_dB_FLL_Theor, sqrt(D11)/2/pi)
 % ylabel('RMSE of frequency, Hz') 
@@ -72,9 +71,9 @@ D11 = (4*Sksi*Smeas.^3).^(1/4);
 % ylim([0 25])
 
 figure(12)
-plot(SFS.qcno_dB_ArgMax, SFS.EArgMax, SFS.qcno_dB_Mean, SFS.EMean, SFS.qcno_dB_FLL, SFS.EFLL, SFS.qcno_dB_FLL_Theor, SFS.FLL_Theor)
+plot(SFS.qcno_dB_ArgMax, SFS.EArgMax, SFS.qcno_dB_Mean, SFS.EMean, SFS.qcno_dB_FLL, SFS.EFLL, SFS.qcno_dB_FLL_Theor, SFS.FLL_Theor, SFS.qcno_dB_FLL_Theor, sqrt(D11)/2/pi)
 ylabel('RMSE of frequency, Hz') 
 xlabel('q_{c/n0}, dBHz')
-legend( 'ArgMax', 'Mean', 'FLL', 'FLL_{Theor}');
+legend( 'ArgMax', 'Mean', 'FLL', 'FLL_{Theor, Analog}');
 grid on
 ylim([0 25]);
