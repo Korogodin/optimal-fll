@@ -2,9 +2,9 @@
 MW.CG.addControl('pushbutton', 'start(MW)', 'Start');
 global h_timer
 h_timer = MW.CG.addControl2('text', '', 'Timer');
+set(h_timer, 'BackgroundColor', get(gcf, 'Color'));
 
 % Panels and Axes 
-
 
 % Panel of Stratonovich eq
 p1 = MW.newPG('Stratonovich', 'Stratonovich', 2, 2);
@@ -17,15 +17,11 @@ ArrPlace = zeros(2,2); ArrPlace(2, 2) = 1; MW.PG{p1}.newAxes(ArrPlace, 'plot_Str
 p2 = MW.newPG('All Results', 'Results', 2, 2);
 ArrPlace = zeros(2,2); ArrPlace(1, 1) = 1; MW.PG{p2}.newAxes(ArrPlace, 'plot_Res_Freq');
 ArrPlace = zeros(2,2); ArrPlace(2, 1) = 1; MW.PG{p2}.newAxes(ArrPlace, 'plot_Res_FreqRate');
-% ArrPlace = zeros(2,2); ArrPlace(1, 2) = 1; MW.PG{p2}.newAxes(ArrPlace, 'plot_Res_ErrorFreq');
-% ArrPlace = zeros(2,2); ArrPlace(2, 2) = 1; MW.PG{p2}.newAxes(ArrPlace, 'plot_Res_ErrorFreqRate');
+ArrPlace = zeros(2,2); ArrPlace(1, 2) = 1; MW.PG{p2}.newAxes(ArrPlace, 'plot_Res_ErrorFreq');
+ArrPlace = zeros(2,2); ArrPlace(2, 2) = 1; MW.PG{p2}.newAxes(ArrPlace, 'plot_Res_ErrorFreqRate');
 
 % Panel of Statistic
 p3 = MW.newPG('Statistic', 'Statistic', 1, 1);
 ArrPlace = zeros(1,1); ArrPlace(1, 1) = 1; MW.PG{p3}.newAxes(ArrPlace, 'plot_Stat');
 
-
-% p2 = MW.newPG('Big Kalman', 'Big Kalm', 3, 2);
-% p3 = MW.newPG('Mini Kalman', 'Mini Kalm', 2, 4);
-
-% Test
+MW.setActivePG(p1);
