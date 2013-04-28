@@ -22,7 +22,7 @@ addpath([pwd '/stratonovich']); % Class of integral solution of Stratonovich equ
 addpath([pwd '/ckalman']); % Classes of Kalman filters
 addpath([pwd '/stat']); % Statistic
 
-MW = CMainWindow('Multiantennas receiver');
+MW = CMainWindow('Optimal FLL');
 if MW.handle == 0
     clear MW;
     return;
